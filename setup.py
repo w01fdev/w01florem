@@ -1,5 +1,5 @@
 """w01florem
-Copyright (C) 2020 w01f - https://github.com/w01fdev/
+Copyright (C) 2020 - 2021 w01f - https://github.com/w01fdev/
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -46,12 +46,13 @@ setup(
     packages=['w01florem', ],
     python_requires='>=3.3',
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 3 - Alpha',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
 )

@@ -1,5 +1,5 @@
 """w01florem
-Copyright (C) 2020 w01f - https://github.com/w01fdev/
+Copyright (C) 2020-2021 w01f - https://github.com/w01fdev/
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@ fck capitalism, fck patriarchy, fck racism, fck animal oppression ...
 
 
 # constants
-DATE = '2020-12-27'
+DATE = '2021-02-03'
 DESCRIPTION = '''A lorem ipsum creator with the special feature of 
 creating multiple files with different names and contents in different 
 folders.'''
@@ -34,6 +34,4 @@ HACKERS = ['w01f', ]
 LICENSE = 'GPL-3.0'
 NAME = 'w01florem'
 URL = 'https://github.com/w01fdev/w01florem'
-VERSION = '0.0.1'
-
-
+VERSION = '0.1.0'

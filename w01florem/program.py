@@ -25,7 +25,7 @@ fck capitalism, fck patriarchy, fck racism, fck animal oppression ...
 
 
 # constants
-DATE = '2021-02-03'
+DATE = '2021-02-07'
 DESCRIPTION = '''A lorem ipsum creator with the special feature of 
 creating multiple files with different names and contents in different 
 folders.'''
@@ -34,4 +34,4 @@ HACKERS = ['w01f', ]
 LICENSE = 'GPL-3.0'
 NAME = 'w01florem'
 URL = 'https://github.com/w01fdev/w01florem'
-VERSION = '0.1.0'
+VERSION = '0.1.1'

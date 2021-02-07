@@ -32,37 +32,37 @@ import random
 
 # constants
 WORDS = [
-    'At', 'Et', 'Itaque', 'Nam', 'Nemo', 'Neque', 'Quis', 'Sed',
-    'Temporibus', 'Ut', 'a', 'ab', 'accusamus', 'accusantium', 'ad',
-    'adipisci', 'alias', 'aliquam', 'aliquid', 'amet,', 'animi,',
-    'aperiam,', 'architecto', 'asperiores', 'aspernatur', 'assumenda',
-    'atque', 'aut', 'autem', 'beatae', 'blanditiis', 'commodi',
-    'consectetur,', 'consequatur', 'consequatur', 'consequatur,',
-    'consequuntur', 'corporis', 'corrupti', 'culpa', 'cum', 'cumque',
-    'cupiditate', 'debitis', 'delectus,', 'deleniti', 'deserunt',
-    'dicta', 'dignissimos', 'distinctio.', 'dolor', 'dolore', 'dolorem',
-    'doloremque', 'dolores', 'doloribus', 'dolorum', 'ducimus', 'ea',
-    'eaque', 'earum', 'eius', 'eligendi', 'enim', 'eos', 'error',
-    'esse', 'est', 'est,', 'et', 'eum', 'eveniet', 'ex', 'excepturi',
-    'exercitationem', 'expedita', 'explicabo.', 'facere', 'facilis',
-    'fuga.', 'fugiat', 'fugit,', 'harum', 'hic', 'id', 'illo', 'illum',
-    'impedit', 'in', 'incidunt', 'inventore', 'ipsa', 'ipsam', 'ipsum',
-    'iste', 'iure', 'iusto', 'labore', 'laboriosam,', 'laborum',
-    'laudantium,', 'libero', 'magnam', 'magni', 'maiores', 'maxime',
-    'minima', 'minus', 'modi', 'molestiae', 'molestias', 'mollitia',
-    'natus', 'necessitatibus', 'nesciunt.', 'nihil', 'nisi', 'nobis',
-    'non', 'nostrum', 'nulla', 'numquam', 'occaecati', 'odio', 'odit',
-    'officia', 'officiis', 'omnis', 'optio', 'pariatur', 'perferendis',
-    'perspiciatis', 'placeat', 'porro', 'possimus,', 'praesentium',
-    'provident,', 'quae', 'quaerat', 'quam', 'quas', 'quasi', 'qui',
-    'quia', 'quibusdam', 'quidem', 'quis', 'quisquam', 'quo', 'quod',
-    'quos', 'ratione', 'recusandae.', 'reiciendis', 'rem', 'repellat.',
-    'repellendus.', 'reprehenderit', 'repudiandae', 'rerum', 'saepe',
-    'sapiente', 'sed', 'sequi', 'similique', 'sint', 'sit', 'soluta',
-    'sunt', 'suscipit', 'tempora', 'tempore,', 'tenetur', 'totam',
-    'ullam', 'unde', 'ut', 'vel', 'velit', 'velit,', 'veniam,',
-    'veritatis', 'vero', 'vitae', 'voluptas', 'voluptate', 'voluptatem',
-    'voluptatem.', 'voluptates', 'voluptatibus', 'voluptatum'
+    'a', 'ab', 'accusamus', 'accusantium', 'ad', 'adipisci', 'alias',
+    'aliquam', 'aliquid', 'amet', 'animi', 'aperiam', 'architecto',
+    'asperiores', 'aspernatur', 'assumenda', 'at', 'atque', 'aut',
+    'autem', 'beatae', 'blanditiis', 'commodi', 'consectetur',
+    'consequatur', 'consequuntur', 'corporis', 'corrupti', 'culpa',
+    'cum', 'cumque', 'cupiditate', 'debitis', 'delectus', 'deleniti',
+    'deserunt', 'dicta', 'dignissimos', 'distinctio', 'dolor',
+    'dolore', 'dolorem', 'doloremque', 'dolores', 'doloribus',
+    'dolorum', 'ducimus', 'ea', 'eaque', 'earum', 'eius', 'eligendi',
+    'enim', 'eos', 'error', 'esse', 'est', 'et', 'eum', 'eveniet',
+    'ex', 'excepturi', 'exercitationem', 'expedita', 'explicabo',
+    'facere', 'facilis', 'fuga', 'fugiat', 'fugit', 'harum', 'hic',
+    'id', 'illo', 'illum', 'impedit', 'in', 'incidunt', 'inventore',
+    'ipsa', 'ipsam', 'ipsum', 'iste', 'itaque', 'iure', 'iusto',
+    'labore', 'laboriosam', 'laborum', 'laudantium', 'libero',
+    'magnam', 'magni', 'maiores', 'maxime', 'minima', 'minus',
+    'modi', 'molestiae', 'molestias', 'mollitia', 'nam', 'natus',
+    'necessitatibus', 'nemo', 'neque', 'nesciunt', 'nihil', 'nisi',
+    'nobis', 'non', 'nostrum', 'nulla', 'numquam', 'occaecati',
+    'odio', 'odit', 'officia', 'officiis', 'omnis', 'optio',
+    'pariatur', 'perferendis', 'perspiciatis', 'placeat', 'porro',
+    'possimus', 'praesentium', 'provident', 'quae', 'quaerat', 'quam',
+    'quas', 'quasi', 'qui', 'quia', 'quibusdam', 'quidem', 'quis',
+    'quisquam', 'quo', 'quod', 'quos', 'ratione', 'recusandae',
+    'reiciendis', 'rem', 'repellat', 'repellendus', 'reprehenderit',
+    'repudiandae', 'rerum', 'saepe', 'sapiente', 'sed', 'sequi',
+    'similique', 'sint', 'sit', 'soluta', 'sunt', 'suscipit',
+    'tempora', 'tempore', 'temporibus', 'tenetur', 'totam', 'ullam',
+    'unde', 'ut', 'vel', 'velit', 'veniam', 'veritatis', 'vero',
+    'vitae', 'voluptas', 'voluptate', 'voluptatem', 'voluptates',
+    'voluptatibus', 'voluptatum'
 ]
 
 
@@ -131,8 +131,11 @@ class Lorem:
 
         self._words_max = _check_int(words)
 
-    def _run(self):
-        """Private class for the creation of words and paragraphs.
+    def _create_words(self):
+        """Private class for the creation of words.
+
+        here the words for the paragraphs are generated without
+        formatting. this is done in method <_create_sentences>
 
         :return: <list>
             returns a nested list. each list contains the words of the
@@ -146,6 +149,49 @@ class Lorem:
 
         return words
 
+    def _create_sentences(self, paragraphs):
+        """Private class for the creation of sentences.
+
+        the paragraphs are formatted here. this means that the first
+        letter of the paragraph is capitalised, there is a full stop at
+        the end of the paragraph and of course a visible distance to
+        another paragraph.
+
+        :param paragraphs: <list>
+            here the nested list is passed with words.
+        :return: <list>
+            returns a nested list. each list contains the words of the
+            corresponding paragraph.
+        """
+
+        sentences = []
+
+        for paragraph in paragraphs:
+            sentence = []
+            for ix, word in enumerate(paragraph):
+                if ix == 0:
+                    sentence.append('{} '.format(word.title()))
+                if ix is not len(paragraph) - 1:
+                    sentence.append('{} '.format(word))
+                else:
+                    sentence.append('{}.\n\n'.format(word))
+            sentences.append(sentence)
+
+        return sentences
+
+    def _run(self):
+        """Private class for the creation of words and paragraphs.
+
+        :return: <list>
+            returns a nested list. each list contains the words of the
+            corresponding paragraph.
+        """
+
+        words = self._create_words()
+        sentences = self._create_sentences(words)
+
+        return sentences
+
 
 class LoremFiles(Lorem):
     """Creates lorem ipsum texts and saves them in different files."""
@@ -156,7 +202,7 @@ class LoremFiles(Lorem):
         :param path: <str>
         :param files: <int>
         :param folders: <int>
-        :param hidden: <bool>
+        :param hidden: <bool> -> default: <True>
         """
         super().__init__()
 
@@ -197,6 +243,9 @@ class LoremFiles(Lorem):
     def run(self):
         """Runs the program and creates the desired data structure."""
 
+        paragraphs = self._run()
+        self._create_files(paragraphs)
+
     def set_files(self, files):
         """Sets the number of files to be created."""
 
@@ -217,8 +266,12 @@ class LoremFiles(Lorem):
 
         self._path = _check_path(path)
 
-    def _create_paragraphs(self):
-        """"""
+    def _create_files(self, paragraphs):
+        """Creates the desired data structure."""
+
+        with open(os.path.join(self._path, 'test.txt'), 'w') as f:
+            for paragraph in paragraphs:
+                [f.write('{}'.format(x)) for x in paragraph]
 
 
 def _check_bool(value):
@@ -247,6 +300,8 @@ def _check_path(path):
             raise NotADirectoryError('directory does not exist')
     else:
         raise TypeError('argument must be type <str>')
+
+    return path
 
 
 def _check_int(value):

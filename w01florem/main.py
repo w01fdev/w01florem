@@ -108,13 +108,14 @@ class Lorem:
     def run(self):
         """Runs the program an create a lorem ipsum text [abstract].
 
-        returns a nested list. each list contains the words of the
-        corresponding paragraph.
-
         :return: <list>
+            returns a nested list. each list contains a sentence.
         """
 
-        return self._run()
+        words = self._create_words()
+        sentences = self._create_sentences(words)
+
+        return sentences
 
     def set_paragraphs(self, paragraphs):
         """Sets the number of paragraphs to be created."""
@@ -179,19 +180,6 @@ class Lorem:
 
         return sentences
 
-    def _run(self):
-        """Private class for the creation of words and paragraphs.
-
-        :return: <list>
-            returns a nested list. each list contains the words of the
-            corresponding paragraph.
-        """
-
-        words = self._create_words()
-        sentences = self._create_sentences(words)
-
-        return sentences
-
 
 class LoremFiles(Lorem):
     """Creates lorem ipsum texts and saves them in different files."""
@@ -243,8 +231,9 @@ class LoremFiles(Lorem):
     def run(self):
         """Runs the program and creates the desired data structure."""
 
-        paragraphs = self._run()
-        self._create_files(paragraphs)
+        words = self._create_words()
+        sentences = self._create_sentences(words)
+        self._create_files(sentences)
 
     def set_files(self, files):
         """Sets the number of files to be created."""

@@ -69,7 +69,8 @@ WORDS = [
 class Lorem:
     """Create a lorem ipsum text with different number of paragraphs."""
 
-    def __init__(self, paragraphs=2, words_min=30, words_max=100):
+    def __init__(self, paragraphs=2, words_min=30, words_max=100,
+                 random_paragraphs=False):
         """Initalisation of the class.
 
         :param paragraphs: <int>
@@ -196,7 +197,7 @@ class LoremFiles(Lorem):
 
         self._files = _check_int(files)
         self._folders = _check_int(folders)
-        self._hidden = _check_bool(hidden)
+        self._hidden = hidden
         self._path = _check_path(path)
 
     def get_files(self):
@@ -248,7 +249,7 @@ class LoremFiles(Lorem):
     def set_hidden(self, hidden):
         """sets the boolean value whether hidden files are created."""
 
-        self._hidden = _check_bool(hidden)
+        self._hidden = hidden
 
     def set_path(self, path):
         """Sets the root directory where the files are created"""
@@ -261,20 +262,6 @@ class LoremFiles(Lorem):
         with open(os.path.join(self._path, 'test.txt'), 'w') as f:
             for paragraph in paragraphs:
                 [f.write('{}'.format(x)) for x in paragraph]
-
-
-def _check_bool(value):
-    """checks whether <bool> value is passed -> else exception error.
-
-    :param value: <bool>
-    :return: <bool>
-    """
-
-    if not isinstance(value, bool):
-        raise TypeError('only <bool> allowed')
-
-    return value
-
 
 def _check_path(path):
     """Checks whether the directory can be created or used."""

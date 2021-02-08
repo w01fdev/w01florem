@@ -34,4 +34,4 @@ HACKERS = ['w01f', ]
 LICENSE = 'GPL-3.0'
 NAME = 'w01florem'
 URL = 'https://github.com/w01fdev/w01florem'
-VERSION = '0.1.3'
+VERSION = '0.1.4'

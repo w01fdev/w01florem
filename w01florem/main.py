@@ -69,13 +69,12 @@ WORDS = [
 class Lorem:
     """Create a lorem ipsum text with different number of paragraphs."""
 
-    def __init__(self, paragraphs=2, words_min=30, words_max=100,
-                 random_paragraphs=False):
+    def __init__(self, paragraphs=2, words_min=30, words_max=100):
         """Initalisation of the class.
 
-        :param paragraphs: <int>
-        :param words_min: <int>
-        :param words_max: <int>
+        :param paragraphs: <int> -> default: <2>
+        :param words_min: <int> -> default: <30>
+        :param words_max: <int> -> default: <100>
         """
 
         self._paragraphs = _check_int(paragraphs)
@@ -133,26 +132,8 @@ class Lorem:
 
         self._words_max = _check_int(words)
 
-    def _create_words(self):
-        """Private class for the creation of words.
-
-        here the words for the paragraphs are generated without
-        formatting. this is done in method <_create_sentences>
-
-        :return: <list>
-            returns a nested list. each list contains the words of the
-            corresponding paragraph.
-        """
-
-        words = []
-
-        for ix in range(self._paragraphs):
-            words.append(random.choices(WORDS, k=random.randint(self._words_min, self._words_max)))
-
-        return words
-
     def _create_sentences(self, paragraphs):
-        """Private class for the creation of sentences.
+        """Private method for the creation of sentences.
 
         the paragraphs are formatted here. this means that the first
         letter of the paragraph is capitalised, there is a full stop at
@@ -180,6 +161,24 @@ class Lorem:
             sentences.append(sentence)
 
         return sentences
+
+    def _create_words(self):
+        """Private method for the creation of words.
+
+        here the words for the paragraphs are generated without
+        formatting. this is done in method <_create_sentences>
+
+        :return: <list>
+            returns a nested list. each list contains the words of the
+            corresponding paragraph.
+        """
+
+        words = []
+
+        for ix in range(self._paragraphs):
+            words.append(random.choices(WORDS, k=random.randint(self._words_min, self._words_max)))
+
+        return words
 
 
 class LoremFiles(Lorem):
